@@ -22,7 +22,12 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@exo-brice/ui/*": ["./src/app/shared/components/*"],
+      "@exo-brice/core/*": ["./src/app/core/*"],
+      "@exo-brice/features/*": ["./src/app/fatures/*"],
+    },
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
