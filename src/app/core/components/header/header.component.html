@@ -1,15 +1,22 @@
 <header>
-    <div class="header-container">
-        <h1 class="header-title">Nom du client / Projet</h1>
-        <div class="header-subtitle">
-            <p class="header-subtitle-text">11/12/2023 &#x2022; 23 ans &#x2022; Régime général &#x2022; 0 conjoint &#x2022; 0 enfants</p>
-            <button class="header-subtitle-button"></button>
-        </div>
+  <div class="header-container">
+    <h1 class="header-title">Nom du client / Projet</h1>
+    <div class="header-subtitle">
+      <p class="header-subtitle-text">
+        11/12/2023 &#x2022; 23 ans &#x2022; Régime général &#x2022; 0 conjoint
+        &#x2022; 0 enfants
+      </p>
+      <button class="header-subtitle-button"></button>
     </div>
-    <div class="header-button-container">
-        <button class="header-button">
-            <span class="header-button-text">Comparer</span>
-            <span class="header-button-icon"></span>
-        </button>
-    </div>
+  </div>
+  <a routerLink="/landing"> <button>Go to the landing page</button> </a>
+  <div class="header-button-container">
+    <button class="header-button">
+      <span class="header-button-text">Comparer</span>
+      <span class="header-button-icon"></span>
+    </button>
+    @if (selectedBrokersCount$ | async; as count) {
+    <div class="header-button-tag">{{ count }}</div>
+    }
+  </div>
 </header>

@@ -1,7 +1,8 @@
 .card
     border-radius: 5px
-    width: 300px
+    width: 280px
     padding: 5px
+    margin: 10px
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15)
     &-heading
         padding: 10px
@@ -13,9 +14,9 @@
             width: 70px
             height: 70px
             border-radius: 35px
-            background-color: #5bcfbb
             font-size: .85rem
             margin: 0
+            background-image: linear-gradient(#2fdbde, #50b507)
             & p
                 text-align: center
         &-texts
@@ -23,11 +24,55 @@
             margin: 0 10px
     &-content
         display: flex
-        margin-top: 15px
+        & p 
+            margin: 0
+            padding-top: 8px
+            padding-bottom: 8px
         &-range
-            
+            display: flex
+            justify-content: flex-start
+            padding: 0
+            & .form-range
+                transform: scale(.5)
+                width: 120px
+                display: inline-block
+                margin: 0
+                padding: 0
         & p 
             font-size: .8rem
+    &-price
+        background-image: linear-gradient(to right, #2fdbde 40%, #50b507)
+        padding-top: 8px
+        padding-bottom: 8px
+        & > p 
+            margin: 0
+            font-size: 1.2rem
+            font-weight: bold
+            text-align: center
+    &-actions
+        margin-top: 10px
+        margin-bottom: 10px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-bottom: 1px solid silver
+        padding-top: 10px
+        padding-bottom: 10px
+        &-btn
+            border: 1px solid #00a8a5
+            outline: none
+            background-color: #00a8a5
+            padding: 8px 25px
+            border-radius: 25px
+            color: #fff
+            flex: 2
+            font-size: 1rem
+            cursor: pointer
+            &.details
+                background-color: #fff
+                color: #000
+                margin-left: 10px
+
     &-title
         font-size: 1.1rem
         margin: 3px 0
@@ -37,4 +82,13 @@
     &-text
         font-size: .8rem
         margin: 0
+    &-bottom
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 10px
+        & > label
+            margin: 0
+            margin-left: 10px
+
     

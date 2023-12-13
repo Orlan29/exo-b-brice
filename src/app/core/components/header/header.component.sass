@@ -12,8 +12,9 @@ header
             margin: 0
             margin-top: 5px
             margin-bottom: 5px
-            font-size: 4rem
+            font-size: 3rem
             font-weight: bold
+            text-transform: uppercase
         &-subtitle
             display: flex
             align-items: center
@@ -40,6 +41,17 @@ header
             cursor: pointer
             font-weight: 400
             font-size: 1.2rem
+            &-tag
+                position: absolute
+                top: -8px
+                right: 0
+                width: 20px
+                height: 20px
+                background-color: #000
+                color: #fff
+                border-radius: 20px
+                border: 1px solid #fff
+                text-align: center
             &-text
                 margin-right: 10px
             &-icon
@@ -50,3 +62,13 @@ header
                 display: inline-block
             &-container
                 margin-left: 20px
+                position: relative
+    & a > button
+        border: 1px solid #000
+        background-color: #000
+        color: #fff
+        padding: 15px
+        border-radius: 3px
+        cursor: pointer
+        &:hover
+            background-color: rgba(0, 0, 0, .75)

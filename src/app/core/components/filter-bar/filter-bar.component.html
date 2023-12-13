@@ -1,0 +1,18 @@
+<section class="filter-bar">
+  <p class="filter-bar-finded">{{ itemCount }} offres trouvées</p>
+  <div class="filter-container">
+    <button (click)="toggleSidenavVisibility()" class="filter-btn">
+      Filtres
+    </button>
+    <div class="filter-switch-container">
+      <input
+        (ngModelChange)="toggleSwitch($event)"
+        [(ngModel)]="state"
+        class="filter-switch"
+        type="checkbox"
+        id="monthly"
+      />
+      <label class="filter-switch-label" for="monthly">Mensuel</label>
+    </div>
+  </div>
+</section>

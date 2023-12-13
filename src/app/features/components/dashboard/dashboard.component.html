@@ -1,19 +1,17 @@
 <section class="dashboard-container">
-    <app-navigation></app-navigation>
-    <div class="dashboard-content">
-        <div>
-            <p>4 offres trouvées</p>
-            <div>
-                <button>Filtres</button>
-                <div>
-                    <input type="checkbox" id="monthly">
-                    <label for="monthly">Mensuel</label>
-                </div>
-            </div>
-            <app-card></app-card>
-        </div>
-        <div>
-            
-        </div>
+  @if (isVisible) {
+  <app-navigation [(isSidenavHidden)]="isVisible"></app-navigation>
+  }
+  <div class="dashboard-content">
+    <app-filter-bar
+      [itemCount]="brokerCount$ | async"
+      [(isSidenavHidden)]="isVisible"
+    >
+    </app-filter-bar>
+    <div class="dashboard-card-container">
+      @for (broker of brokers$ | async; track $index) {
+      <app-card [isMonthly]="isMonthly$ | async" [broker]="broker"></app-card>
+      }
     </div>
+  </div>
 </section>
